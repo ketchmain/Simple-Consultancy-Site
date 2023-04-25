@@ -1,6 +1,6 @@
 <head>
   <meta charset="UTF-8">
-  <title>Kennedy Waweru | Real Estate Professional</title>
+  <title>Ketchmain</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
   <link rel="stylesheet" href="style.css">
