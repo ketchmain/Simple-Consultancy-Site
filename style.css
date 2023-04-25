@@ -1,3 +1,48 @@
+<head>
+  <meta charset="utf-8">
+  <title>Ketchmain</title>
+  <style>
+    new Vue({
+  el: "#app",
+  data: {
+    showMenu: false,
+    menuItems: [
+      { name: "Home", url: "#home" },
+      { name: "About", url: "#about" },
+      { name: "Services", url: "#services" },
+      { name: "Contact", url: "#contact" }
+    ]
+  },
+  methods: {
+    toggleMenu: function() {
+      this.showMenu = !this.showMenu;
+    }
+  },
+  mounted: function() {
+    window.addEventListener("resize", this.handleResize);
+    this.handleResize();
+  },
+  beforeDestroy: function() {
+    window.removeEventListener("resize", this.handleResize);
+  },
+  computed: {
+    isMobile: function() {
+      return window.innerWidth <= 768; // Adjust this value as needed
+    }
+  },
+  methods: {
+    handleResize: function() {
+      if (this.isMobile) {
+        this.showMenu = false;
+      } else {
+        this.showMenu = true;
+      }
+    }
+  }
+});
+  </style>
+</head>
+
 <style>
 /* Base Styles */
 body {
@@ -352,4 +397,5 @@ background-color: #f5f5f5;
     display: block;
   }
 }
+
 </style>
